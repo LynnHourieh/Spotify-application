@@ -12,7 +12,7 @@ function CardArtist({item}) {
             <Card.Img
               variant="top"
               src={item.images[0].url}
-              style={{ width: "19rem", height: "50%" }}
+              style={{ width: "100%", height: "50%" }}
             />
           ) : (
             <Card.Img

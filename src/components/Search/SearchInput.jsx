@@ -100,7 +100,7 @@ const SearchInput = () => {
                   lg={3}
                   className="mb-3"
                   key={item.id}
-                >{loading &&( <CardArtist item={item} loading={loading} />)}
+                >{loading &&( <CardArtist item={item}  />)}
                  
                 </Col>
               ))}
