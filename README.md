@@ -1,8 +1,19 @@
-# React + Vite
+# Spotify-Application
+Description: this application should let a user search for an artist to
+retrieve information about his/her albums.
+## PROJECT :
+this project is a done using React JS 
+Backend: Spotify API
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+## RUN LOCALLY
+### 1. Clone repository :
+git clone https://github.com/LynnHourieh/Spotify-application.git
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 2. Run Frontend
+
+```
+# open new terminal
+$ npm install
+$ npm run dev
+```
