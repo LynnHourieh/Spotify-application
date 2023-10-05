@@ -1,23 +1,33 @@
 import Card from "react-bootstrap/Card";
 import Rating from "../Rating";
+import { Link } from "react-router-dom";
 
-function CardArtist() {
-    const rating = 2.5;
+function CardArtist({item}) {
+      
   return (
-    <div className="vw-100  d-flex justify-content-between">
-      <Card style={{ width: "18rem" }}>
-        <Card.Img variant="top" src="holder.js/100px180" />
-        <Card.Body>
-          <Card.Title>Card Title</Card.Title>
-          <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </Card.Text>
-        <Rating rating={rating}/>
-        </Card.Body>
-      </Card>
-     
-
+    <div className="vw-100  d-flex justify-content-between m-3 ">
+      <Link to={`/album/${item.id}`} className="text-decoration-none">
+        <Card style={{ height: 420, cursor: "pointer" }}>
+          {item.images && item.images.length > 0 ? (
+            <Card.Img
+              variant="top"
+              src={item.images[0].url}
+              style={{ width: "19rem", height: "50%" }}
+            />
+          ) : (
+            <Card.Img
+              variant="top"
+              src={"../public/images/person.png"}
+              style={{ width: "19rem", height: "50%" }}
+            />
+          )}
+          <Card.Body style={{ width: "100%", height: "50%" }}>
+            <Card.Title>{item.name}</Card.Title>
+            <Card.Text>{item.followers.total} followers</Card.Text>
+            <Rating rating={item.popularity / 10} />
+          </Card.Body>
+        </Card>
+      </Link>
     </div>
   );
 }

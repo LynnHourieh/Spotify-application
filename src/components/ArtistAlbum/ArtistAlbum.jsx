@@ -3,6 +3,9 @@ import Col from "react-bootstrap/Col";
 import CardAlbum from "../CardAlbum/CardAlbum";
 
 const SearchAlbum = () => {
+  const GetAlbums=()=>{
+    
+  }
   return (
     <div className="m-5">
       <h2>Name</h2>

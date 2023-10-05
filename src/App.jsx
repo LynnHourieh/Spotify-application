@@ -5,7 +5,7 @@ import { Route, Routes,Router } from "react-router-dom";
 import { Login } from './components/Login/Login';
 import SearchInput from './components/Search/SearchInput';
 import SearchAlbum from './components/ArtistAlbum/ArtistAlbum';
-import SearchArtist from './components/SearchArtist/SearchArtist';
+
 function App() {
 
 
@@ -19,8 +19,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/home" element={<SearchInput />} />
-        <Route path="/artist" element={<SearchArtist />} />
-        <Route path="/album" element={<SearchAlbum />} />
+       
+        <Route path="/album/:id" element={<SearchAlbum />} />
       </Routes>
     </>
   );
