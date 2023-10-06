@@ -71,7 +71,7 @@ const SearchInput = () => {
                 : "d-flex justify-content-center"
             }
           >
-            <Form className="h-auto w-50 p-3" onSubmit={searchArtists}>
+            <Form className="h-auto w-50 p-3" onChange={searchArtists}>
               <InputGroup>
                 <FormControl
                   className="text-center"
