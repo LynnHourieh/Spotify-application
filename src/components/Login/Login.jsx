@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import { Button } from "react-bootstrap"; 
 import "../Login/Login.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -10,13 +9,11 @@ export const Login = () => {
   const redirectURL = import.meta.env.VITE_REDIRECT_URL;
   const authEndpoint = import.meta.env.VITE_AUTH_ENDPOINT;
   const responseType = import.meta.env.VITE_RESPONSE_TYPE;
-const navigate=useNavigate()
+  const navigate=useNavigate()
 
-  console.log(clientID)
-// const [token, setToken] = useState("");
+  //console.log(clientID)
    let token = window.localStorage.getItem("token");
    const logout =()=>{
-    // setToken("");
     localStorage.removeItem("token")
     navigate("/")
    }

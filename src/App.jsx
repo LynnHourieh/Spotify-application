@@ -5,11 +5,13 @@ import { Route, Routes,Router } from "react-router-dom";
 import { Login } from './components/Login/Login';
 import SearchInput from './components/Search/SearchInput';
 import SearchAlbum from './components/ArtistAlbum/ArtistAlbum';
-
+import { useLocation } from 'react-router-dom';
 
 function App() {
-
-
+ const { search } = useLocation();
+ const sp = new URLSearchParams(search);
+ const query = sp.get("q") || "";
+ console.log(query);
 
   return (
     <>
@@ -24,7 +26,7 @@ function App() {
         <Route path="/" element={<Login />} />
         <Route path="/home" element={<SearchInput />} />
         <Route path="/home/:q" element={<SearchInput />} />
-        <Route path="/album/:id" element={<SearchAlbum />} />
+        <Route path="/album/:id" element={<SearchAlbum query={query} />} />
       </Routes>
     </>
   );

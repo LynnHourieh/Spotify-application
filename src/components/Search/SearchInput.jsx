@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import CardArtist from "../CardArtist/CardArtist";
-import { useSearchParams } from "react-router-dom"; // Import useSearchParams
+import { useSearchParams,useLocation } from "react-router-dom"; // Import useSearchParams
 
 const SearchInput = () => {
   const [token, setToken] = useState("");
@@ -18,7 +18,6 @@ const SearchInput = () => {
   const [artists, setArtists] = useState([]);
   const [flag, setFlag] = useState(false);
   const [loading, setLoading] = useState(false);
-  const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams(); // Initialize searchParams
 
   useEffect(() => {
@@ -83,7 +82,7 @@ const SearchInput = () => {
                   placeholder="Search for an artist..."
                   aria-label="Search for an artist"
                   aria-describedby="button-search"
-                  value={searchKey} // Set the value of the input to the searchKey state
+                  value={searchKey}
                   onChange={(e) => setSearchKey(e.target.value)}
                 />
                 <Button
@@ -100,7 +99,7 @@ const SearchInput = () => {
             <Row className="m-3">
               {artists.map((item) => (
                 <Col sm={6} md={4} lg={3} className="mb-3" key={item.id}>
-                  {loading && <CardArtist item={item} />}
+                  {loading && <CardArtist item={item}  />}
                 </Col>
               ))}
             </Row>
