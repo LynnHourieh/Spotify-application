@@ -5,8 +5,7 @@ function CardAlbum({item}) {
 
   return (
     <div className="vw-100  d-flex justify-content-between">
-      
-      <Card style={{ width: "18rem", height:"40rem" }}>
+      <Card style={{ width: "18rem", height: "40rem" }}>
         {item.images && item.images.length > 0 ? (
           <Card.Img
             variant="top"
@@ -23,21 +22,26 @@ function CardAlbum({item}) {
         <Card.Body>
           <Card.Title>{item.name}</Card.Title>
           <Card.Text>
-            <p> {item.artists[0].name}</p>
-           
-              {" "}
-              <p>{item.release_date}</p>
-              <p> {item.total_tracks} traks </p>
-         
+            <p>Artists:</p>
+            <ul class="text-muted">
+              {item.artists.map((artist) => (
+                <li key={artist.id}>{artist.name}</li>
+              ))}
+            </ul>{" "}
+            <p class="text-muted">{item.release_date}</p>
+            <p class="text-muted"> {item.total_tracks} traks </p>
           </Card.Text>
         </Card.Body>
-        <Card.Footer className="text-muted text-center"
-        >
-             <a style={{textDecoration:"none"}}
-              href={item.external_urls.spotify}
-              target="_blank"
-              rel="noopener noreferrer"
-            >Preview on Spotify</a></Card.Footer>
+        <Card.Footer className="text-muted text-center">
+          <a
+            style={{ textDecoration: "none" }}
+            href={item.external_urls.spotify}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Preview on Spotify
+          </a>
+        </Card.Footer>
       </Card>
     </div>
   );

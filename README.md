@@ -4,6 +4,7 @@ retrieve information about his/her albums.
 ## PROJECT :
 this project is a done using React JS 
 Backend: Spotify API
+React-bootstrap library for design
 
 
 ## RUN LOCALLY
@@ -17,3 +18,7 @@ git clone https://github.com/LynnHourieh/Spotify-application.git
 $ npm install
 $ npm run dev
 ```
+
+
+#### Search for multiple artist in the same album:
+Distrokidd
