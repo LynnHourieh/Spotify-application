@@ -22,3 +22,10 @@ $ npm run dev
 
 #### Search for multiple artist in the same album:
 Distrokidd
+
+
+#### Components:
+1. Login : Landing Page
+2. SearchIput: ArtistSearch
+3. CardArtist: Browsing Artist
+4. ArtistAlbum: Browsing Album Artist
