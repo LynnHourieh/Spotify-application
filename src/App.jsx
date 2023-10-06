@@ -11,7 +11,7 @@ function App() {
  const { search } = useLocation();
  const sp = new URLSearchParams(search);
  const query = sp.get("q") || "";
- console.log(query);
+//  console.log(query);
 
   return (
     <>
