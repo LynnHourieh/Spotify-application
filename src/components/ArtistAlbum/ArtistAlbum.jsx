@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 
-const SearchAlbum = ({query}) => {
+const SearchAlbum = () => {
   let { id } = useParams();
   let token = localStorage.getItem("token");
   const [albums, setAlbums] = useState("");
@@ -14,12 +14,7 @@ const SearchAlbum = ({query}) => {
   const [artistName, setArtistName] = useState("");
   const navigate = useNavigate();
  
-  // const goToPosts = () =>
-  //   navigate({
-  //     pathname: "/home",
-  //     search: `?q=${query}`,
-  //   });
-  //   console.log(query)
+  
 
   const getAlbums = async () => {
     const { data } = await axios.get(
