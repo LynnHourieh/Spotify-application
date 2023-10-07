@@ -41,13 +41,6 @@ const SearchInput = () => {
     setToken(token);
   }, []);
 
-  useEffect(() => {
-    // When the component mounts or the q changes, update the URL
-    //q is the value entered in input 
-    setSearchParams({ q: q });
-
-  }, [q, setSearchParams]);
-
   const searchArtists = async (e) => {
     e.preventDefault();
 
