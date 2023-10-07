@@ -17,7 +17,7 @@ function App() {
     <>
       <Navbar className="bg-body-tertiary">
         <Container>
-          <Navbar.Brand onClick={() => window.history.back()}>
+          <Navbar.Brand href="/home">
             Spotify Artistic Search
           </Navbar.Brand>
         </Container>

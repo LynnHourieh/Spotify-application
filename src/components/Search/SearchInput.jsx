@@ -43,16 +43,19 @@ const SearchInput = () => {
     // When the component mounts or the q changes, update the URL
     //q is the value entered in input
     setSearchParams({ q: q });
+
   }, [q, setSearchParams]);
 
   const searchArtists = async (e) => {
     e.preventDefault();
+
     try {
       const { data } = await axios.get("https://api.spotify.com/v1/search", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
         params: {
+            //q:e.target.value
           q: q, 
           type: "artist",
         },
