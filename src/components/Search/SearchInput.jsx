@@ -13,7 +13,6 @@ import { useSearchParams } from "react-router-dom";
 
 const SearchInput = () => {
   const [token, setToken] = useState("");
-  const [searchKey, setSearchKey] = useState("");
   const [artists, setArtists] = useState([]);
   const [flag, setFlag] = useState(false);
 
@@ -21,8 +20,11 @@ const SearchInput = () => {
   //get q from url
   const q = searchParams.get("q");
   //console.log(q)
+  
+  //handle user authenticaction 
   useEffect(() => {
     const hash = window.location.hash;
+    console.log(hash)
     let token = window.localStorage.getItem("token");
 
     if (!token && hash) {
@@ -41,7 +43,7 @@ const SearchInput = () => {
 
   useEffect(() => {
     // When the component mounts or the q changes, update the URL
-    //q is the value entered in input
+    //q is the value entered in input 
     setSearchParams({ q: q });
 
   }, [q, setSearchParams]);
@@ -56,7 +58,7 @@ const SearchInput = () => {
         },
         params: {
             //q:e.target.value
-          q: q, 
+          query: q, 
           type: "artist",
         },
       });

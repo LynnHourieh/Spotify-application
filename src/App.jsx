@@ -5,7 +5,7 @@ import { Route, Routes,Router } from "react-router-dom";
 import { Login } from './components/Login/Login';
 import SearchInput from './components/Search/SearchInput';
 import SearchAlbum from './components/ArtistAlbum/ArtistAlbum';
-import { useLocation } from 'react-router-dom';
+
 
 function App() {
 
@@ -19,9 +19,11 @@ function App() {
         </Container>
       </Navbar>
       <Routes>
-        <Route path="/" element={<Login />} />
+        {/* screen 1 */}
+        <Route path="/" element={<Login />} /> 
+        {/* screen 2 */}
         <Route path="/home" element={<SearchInput />} />
-        <Route path="/home/:q" element={<SearchInput />} />
+        {/* screen 3 */}
         <Route path="/album/:id" element={<SearchAlbum />} />
       </Routes>
     </>

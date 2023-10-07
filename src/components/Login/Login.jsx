@@ -19,15 +19,34 @@ export const Login = () => {
    }
   return (
     <div className="d-flex justify-content-center align-items-center vh-100">
-      {!token ? <Button variant="outline-secondary" className="h-auto w-50" href={`${authEndpoint}?client_id=${clientID}&redirect_uri=${redirectURL}&response_type=${responseType}`}>
-        <div className="d-flex justify-content-between align-items-center">
-          <div>
-            </div> <p style={{ fontSize: 30 }}>Login</p>
-          <p>
-            <FontAwesomeIcon icon={faSpotify} className="spotifyIcon" />
-          </p>{" "}
-        </div>
-      </Button>:<Button onClick={logout}>Logout</Button>}
+      {!token ? (
+        <Button
+          variant="outline-secondary"
+          className="h-auto w-50"
+          href={`${authEndpoint}?client_id=${clientID}&redirect_uri=${redirectURL}&response_type=${responseType}`}
+        >
+          <div className="d-flex justify-content-between align-items-center">
+            <div></div> <p style={{ fontSize: 30 }}>Login</p>
+            <p>
+              <FontAwesomeIcon icon={faSpotify} className="spotifyIcon" />
+            </p>{" "}
+          </div>
+        </Button>
+      ) : (
+        <Button
+          variant="outline-secondary"
+          className="h-auto w-50"
+           onClick={logout}
+        >
+          {" "}
+          <div className="d-flex justify-content-between align-items-center">
+            <div></div> <p style={{ fontSize: 30 }}>Logout</p>
+            <p>
+              <FontAwesomeIcon icon={faSpotify} className="spotifyIcon" />
+            </p>{" "}
+          </div>
+        </Button>
+      )}
     </div>
   );
 };
