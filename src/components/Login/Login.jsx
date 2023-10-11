@@ -26,7 +26,7 @@ export const Login = () => {
           href={`${authEndpoint}?client_id=${clientID}&redirect_uri=${redirectURL}&response_type=${responseType}`}
         >
           <div className="d-flex justify-content-between align-items-center">
-            <div></div> <p style={{ fontSize: 30 }}>Login</p>
+            <div></div> <div style={{ fontSize: 30 }}>Login</div>
             <p>
               <FontAwesomeIcon icon={faSpotify} className="spotifyIcon" />
             </p>{" "}

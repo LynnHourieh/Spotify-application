@@ -21,6 +21,7 @@ const SearchInput = () => {
   const q = searchParams.get("q");
   //console.log(q)
   
+  console.log(artists)
   //handle user authenticaction 
   useEffect(() => {
     const hash = window.location.hash;
@@ -70,7 +71,7 @@ const SearchInput = () => {
           <div
             className={
               !flag
-                ? "d-flex justify-content-center align-items-center vh-100"
+                ? "d-flex justify-content-center align-items-center vh-100  "
                 : "d-flex justify-content-center"
             }
           >
@@ -104,9 +105,9 @@ const SearchInput = () => {
             </Form>
           </div>
           {q && (
-            <Row className="m-3">
+            <Row className="m-3 ">
               {artists.map((item) => (
-                <Col sm={6} md={4} lg={3} className="mb-3" key={item.id}>
+                <Col sm={6} md={4} lg={3} className="" key={item.id}>
                   {flag && <CardArtist item={item} />}
                 </Col>
               ))}
@@ -114,7 +115,12 @@ const SearchInput = () => {
           )}
         </div>
       ) : (
-        <h2>please login</h2>
+        <a
+          href="/"
+          className="d-flex justify-content-center align-items-center vh-100"
+        >
+          please login
+        </a>
       )}
     </div>
   );

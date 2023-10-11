@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 function CardArtist({item}) {
       
   return (
-    <div className="vw-100  d-flex justify-content-between m-3 ">
+    <div className="  d-flex justify-content-between m-3 ">
       <Link to={`/album/${item.id}`} className="text-decoration-none">
-        <Card style={{ height: 420, cursor: "pointer" }}>
+        <Card style={{ height: 300, cursor: "pointer", width: "15rem" }}>
           {item.images && item.images.length > 0 ? (
             <Card.Img
               variant="top"
@@ -21,7 +21,7 @@ function CardArtist({item}) {
               style={{ width: "19rem", height: "50%" }}
             />
           )}
-          <Card.Body style={{ width: "100%", height: "50%" }}>
+          <Card.Body style={{ height: "50%" }}>
             <Card.Title>{item.name}</Card.Title>
             <Card.Text>{item.followers.total} followers</Card.Text>
             <Rating rating={item.popularity / 10} />

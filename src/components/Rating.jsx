@@ -58,4 +58,46 @@ function Rating({ rating }) {
   );
 }
 
+// function convertPopularityToStars(popularity) {
+//   if (popularity >= 0 && popularity <= 20) {
+//     return 1;
+//   } else if (popularity > 20 && popularity <= 40) {
+//     return 2;
+//   } else if (popularity > 40 && popularity <= 60) {
+//     return 3;
+//   } else if (popularity > 60 && popularity <= 80) {
+//     return 4;
+//   } else if (popularity > 80 && popularity <= 100) {
+//     return 5;
+//   } else {
+//     return 0; // You can handle invalid values however you like
+//   }
+// }
+
+// function Rating({ rating }) {
+//   // Use the convertPopularityToStars function to get the star rating
+//   const starRating = convertPopularityToStars(rating);
+
+//   return (
+//     <div className="rating">
+//       {[1, 2, 3, 4, 5].map((index) => (
+//         <span key={index}>
+//           <FontAwesomeIcon
+//             style={{ color: "#FFC000" }}
+//             icon={
+//               index <= starRating
+//                 ? faStar
+//                 : index - 0.5 <= starRating
+//                 ? faStarHalfAlt
+//                 : regularStar
+//             }
+//             className={index <= starRating ? "fill" : ""}
+//           />
+//         </span>
+//       ))}
+//     </div>
+//   );
+// }
+
+
 export default Rating;

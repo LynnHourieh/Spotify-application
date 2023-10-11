@@ -1,7 +1,7 @@
 import './App.css'
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
-import { Route, Routes,Router } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { Login } from './components/Login/Login';
 import SearchInput from './components/Search/SearchInput';
 import SearchAlbum from './components/ArtistAlbum/ArtistAlbum';

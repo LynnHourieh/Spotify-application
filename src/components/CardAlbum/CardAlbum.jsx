@@ -4,32 +4,35 @@ import Card from "react-bootstrap/Card";
 function CardAlbum({item}) {
 
   return (
-    <div className="vw-100  d-flex justify-content-between">
-      <Card style={{ width: "18rem", height: "40rem" }}>
+    <div className="  d-flex justify-content-between">
+      <Card style={{ width: "15rem", height: 500 }}>
         {item.images && item.images.length > 0 ? (
           <Card.Img
             variant="top"
             src={item.images[0].url}
-            style={{ width: "100%", height: "50%" }}
+            style={{ width: "100%", height: "40%" }}
           />
         ) : (
           <Card.Img
             variant="top"
             src={"../public/images/person.png"}
-            style={{ width: "19rem", height: "50%" }}
+            style={{ width: "19rem", height: "40%" }}
           />
         )}
-        <Card.Body>
+        <Card.Body style={{ height: "60%" }}>
           <Card.Title>{item.name}</Card.Title>
           <Card.Text>
-            <p>Artists:</p>
-            <ul class="text-muted">
-              {item.artists.map((artist) => (
-                <li key={artist.id}>{artist.name}</li>
-              ))}
-            </ul>{" "}
-            <p class="text-muted">{item.release_date}</p>
-            <p class="text-muted"> {item.total_tracks} traks </p>
+           
+              {" "}
+              <h3>Artists:</h3>
+              <ul class="text-muted">
+                {item.artists.map((artist) => (
+                  <li key={artist.id}>{artist.name}</li>
+                ))}
+              </ul>{" "}
+              <div class="text-muted">{item.release_date}</div>
+              <div class="text-muted"> {item.total_tracks} tracks </div>
+       
           </Card.Text>
         </Card.Body>
         <Card.Footer className="text-muted text-center">
